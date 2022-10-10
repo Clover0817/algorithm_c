@@ -1,11 +1,6 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdbool.h>
-#include <string.h>
-#include <math.h>
-#define MAX_SIZE 50
-bool visited[MAX_SIZE];
 
 void dfs(int* item, int* bucket, int n, int start, int depth) {
 	if (depth == 6) {
