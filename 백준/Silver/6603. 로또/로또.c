@@ -21,19 +21,17 @@ int main() {
 	int* item;
 	int bucket[6];
 
-	while (1) {
-		scanf("%d", &n);
-		if (!n) break;
+	scanf("%d", &n);
+	while (n != 0) {
 		item = (int*)malloc(sizeof(int) * n);
 
-		for (int i = 0; i < n; i++) {
+		for (int i = 0; i < n; i++) 
 			scanf("%d", &item[i]);
-		}
+		
 		dfs(item, bucket, n, 0, 0);
 		printf("\n");
 
 		free(item);
+		scanf("%d", &n);
 	}
-
-	return 0;
 }
